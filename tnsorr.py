@@ -37,6 +37,65 @@ random_num_genrator = tf.random.uniform(
     [2,3],
     minval = 0,
     maxval = 100,
-    dtype= tf.int64
+    dtype= tf.int64,
+    seed = None
+    name = none
 )
 print(random_num_genrator)
+#seed - use seed if you want to same value in other random number generator:
+tf.random.set_seed(5)
+print(tf.random.uniform([5,],maxval = 5,seed=10))
+print(tf.random.uniform([5,],maxval = 5,seed=10))
+print(tf.random.uniform([5,],maxval = 5,seed=10))
+# the result of this value is same in every program if set_seed , shape and seed will be same.
+
+#lets say i have created another random seed with same value: 
+tf.random.set_seed(5)
+print(tf.random.uniform([5,],maxval = 5,seed=10))
+print(tf.random.uniform([5,],maxval = 5,seed=10))
+print(tf.random.uniform([5,],maxval = 5,seed=10))
+# result will be same as the upper one bcz seed , shape, set_seed is same.
+#if we try to change anything result will be different.
+
+# 2nd method:
+norma_random = tf.random.normal(
+    [2,3],
+    mean = 10,
+    stddv = 1
+)
+print(norma_random)# in this mean means it generate random number closesr to 10
+#stddv means how far can go to 10
+#genreate normal if you want number to be closer of your desire 
+#genreate with uniform if you want just random number
+
+# slicing elements:
+varr = tf.variable([4,5,76,8,6,8,90])
+print(varr)
+print(varr[:])
+varrr = tf.Variable([
+    [[3,4,6],
+     [46,4,3]],
+    [[32,6,8],
+     [2,6,7]]
+])
+print(varrr[0:,:,0])
+
+#tensor math:
+x_abs = ([3, -7.6, 34.5, -6])
+tf.abs(x_abs)# it will print : 3. , 7.6 , 34.5, -6.0
+#so abs(absolute) does change negative to positive ,+ve >+ve
+
+#all math method do with their corresponding indexes..
+# add:
+t1_tensor = tf.variable([3,5,6,8])
+t2_tensor = tf.Variable([6,9,12,17])
+print(tf.add(t1_tensor, t2_tensor))
+# subtract:
+print(tf.subtract(t1_tensor, t2_tensor))
+# multiply:
+print(tf.multiply(t1_tensor, t2_tensor))
+#divide:
+print(tf.divide(t1_tensor, t2_tensor))
+#what if there is an situation where 3/0 so it will infinite so for that case we use:
+print(tf.math.divide_no_nan(t1_tensor, t2_tensor)) 
+#it also divide but when there x/y where y = 0 then ans will be o for that particular index
