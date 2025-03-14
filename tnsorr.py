@@ -1,4 +1,5 @@
-
+import tensorflow as tf
+import numpy as np
 # creating a 1d array using tesorfloww:
 tensor_1d = tf.Variable([4])
 print(tensor_1d)
@@ -87,15 +88,64 @@ tf.abs(x_abs)# it will print : 3. , 7.6 , 34.5, -6.0
 
 #all math method do with their corresponding indexes..
 # add:
-t1_tensor = tf.variable([3,5,6,8])
+t1_tensor = tf.Variable([3,5,6,8])
 t2_tensor = tf.Variable([6,9,12,17])
-print(tf.add(t1_tensor, t2_tensor))
-# subtract:
-print(tf.subtract(t1_tensor, t2_tensor))
+print(tf.add(t1_tensor, t2_tensor))#output : 9, 14,18, 25
+#reduce sum method:
+red_sum = tf.Variable([
+    [3,5,7],
+    [1,-4,3],
+    [-5,-3, 6]
+])
+print(tf.math.reduce_sum(red_sum)) #it will add all the number and give result: 13
+
+#subtract:
+print(tf.subtract(t1_tensor, t2_tensor))#output: -3, -4, -6, -9 
+
 # multiply:
 print(tf.multiply(t1_tensor, t2_tensor))
+
 #divide:
 print(tf.divide(t1_tensor, t2_tensor))
+
 #what if there is an situation where 3/0 so it will infinite so for that case we use:
-print(tf.math.divide_no_nan(t1_tensor, t2_tensor)) 
+print(tf.math.divide_no_nan(t1_tensor, t2_tensor))
 #it also divide but when there x/y where y = 0 then ans will be o for that particular index
+
+#finding max,min value (in 1d):
+arg_var = tf.Variable([4,67,3,56,7,43], dtype = int32)
+print(tf.math.argmax(arg_var))  #it will print -  1(index)
+print(tf.math.argmin(arg_var))  #it will print -  2(index)
+# inding max value (mutlidimensional):
+
+arg_multi_var = ([
+    [23,57,5,7],
+    [46,85,89,4]
+])
+print(tf.math.argmax(arg_multi_var, 0)) # 0 means we willfind max value of each column
+print(tf.math.argmax(arg_multi_var, 1)) # 1 means we well find max value of each row
+print(tf.math.minval(arg_multi_var, 0)) # 0 means we willfind minimun value of each column
+print(tf.math.argmin(arg_multi_var, 1)) # 1 means we willfind min value of each row
+
+#power method:
+power = tf.Variable([[2,6], [1,4]], dtype = int32)
+power1 = tf.Variable([[1,4], [2,3]])
+print(tf.pow(power, power1))#it will print : 2,1296 2, 64
+#it multiplies by 1st row 1colum * 2nd row 1st column and as it is..
+
+#reduce methods:
+red = tf.Variable([
+    [3,5,6,7],
+    [-3,56,6,76],
+    [4,7,5,6]
+])
+print(tf.math.reduce_sum(red)) #output: 178
+#if we specify axis it will on the basis of axis:
+print(tf.math.reduce_sum(red, axis= 0))#column #output : 4, 68, 17, 88
+print(tf.math.reduce_sum(red, axis= 1)) #row #output: 21, 
+#min:
+print(tf.math.reduce_min(red)) #output: -3
+#max:
+print(tf.math.reduce_max(red)) #output: 76
+
+print(tf.math.reduce_mean(red)) #output: mean all and give result
