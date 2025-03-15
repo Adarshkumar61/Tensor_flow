@@ -39,8 +39,8 @@ random_num_genrator = tf.random.uniform(
     minval = 0,
     maxval = 100,
     dtype= tf.int64,
-    seed = None
-    name = none
+    seed = None,
+    name = None
 )
 print(random_num_genrator)
 #seed - use seed if you want to same value in other random number generator:
@@ -124,11 +124,11 @@ arg_multi_var = ([
 ])
 print(tf.math.argmax(arg_multi_var, 0)) # 0 means we willfind max value of each column
 print(tf.math.argmax(arg_multi_var, 1)) # 1 means we well find max value of each row
-print(tf.math.minval(arg_multi_var, 0)) # 0 means we willfind minimun value of each column
+print(tf.math.argmin(arg_multi_var, 0)) # 0 means we willfind minimun value of each column
 print(tf.math.argmin(arg_multi_var, 1)) # 1 means we willfind min value of each row
 
 #power method:
-power = tf.Variable([[2,6], [1,4]], dtype = int32)
+power = tf.Variable([[2,6], [1,4]], dtype = int64)
 power1 = tf.Variable([[1,4], [2,3]])
 print(tf.pow(power, power1))#it will print : 2,1296 2, 64
 #it multiplies by 1st row 1colum * 2nd row 1st column and as it is..
@@ -142,10 +142,44 @@ red = tf.Variable([
 print(tf.math.reduce_sum(red)) #output: 178
 #if we specify axis it will on the basis of axis:
 print(tf.math.reduce_sum(red, axis= 0))#column #output : 4, 68, 17, 88
-print(tf.math.reduce_sum(red, axis= 1)) #row #output: 21, 
+print(tf.math.reduce_sum(red, axis= 1)) #row #output: 21, ,22
 #min:
 print(tf.math.reduce_min(red)) #output: -3
 #max:
 print(tf.math.reduce_max(red)) #output: 76
 
 print(tf.math.reduce_mean(red)) #output: mean all and give result
+
+#sigmoid: if a +ve no is large then it will approach to 1
+         # of a -ve no is large then it will approach to 0
+#   for +ve:
+x = tf.math.sigmoid([2,667,100,345])
+print(tf.math.sigmoid(x))
+# for -ve:
+y = tf.math.sigmoid([-5,-100,-576])
+print(tf.math.sigmoid(y))
+
+# top_k : return highest value and also index of each array(k =1 default)
+top_kk = tf.Variable([
+    [43,4,24,76],
+    [56,67,89,24]
+])
+print(tf.math.top_k(top_kk)) # return:  76, 89 and also: 3, 2(index)
+#we can also define how many value we want by :
+print(tf.math.top_k(top_kk, k=2))
+
+#now some linear algebra:
+# linalg.matmul:  this is for mutipling 2 matrices:
+mat1 = tf.Variable([
+    [2,45,6],
+    [3,5,6]
+])
+mat2= tf.variable([
+    [2,4,55,7],
+    [3,8,5,3],
+    [3,5,8,9]
+])
+print(tf.linalg.matmul(mat1, mat2))#we can also write this as:
+print(mat1@mat2) #it will give same result
+#for transpose of matrix :
+print(tf.transpose(mat1)) #it will give transopose..
