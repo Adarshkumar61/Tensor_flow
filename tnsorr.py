@@ -113,7 +113,7 @@ print(tf.math.divide_no_nan(t1_tensor, t2_tensor))
 #it also divide but when there x/y where y = 0 then ans will be o for that particular index
 
 #finding max,min value (in 1d):
-arg_var = tf.Variable([4,67,3,56,7,43], dtype = int32)
+arg_var = tf.Variable([4,67,3,56,7,43], dtype = tf.int32)
 print(tf.math.argmax(arg_var))  #it will print -  1(index)
 print(tf.math.argmin(arg_var))  #it will print -  2(index)
 # inding max value (mutlidimensional):
@@ -128,7 +128,7 @@ print(tf.math.argmin(arg_multi_var, 0)) # 0 means we willfind minimun value of e
 print(tf.math.argmin(arg_multi_var, 1)) # 1 means we willfind min value of each row
 
 #power method:
-power = tf.Variable([[2,6], [1,4]], dtype = int64)
+power = tf.Variable([[2,6], [1,4]], dtype = tf.int64)
 power1 = tf.Variable([[1,4], [2,3]])
 print(tf.pow(power, power1))#it will print : 2,1296 2, 64
 #it multiplies by 1st row 1colum * 2nd row 1st column and as it is..
@@ -183,3 +183,35 @@ print(tf.linalg.matmul(mat1, mat2))#we can also write this as:
 print(mat1@mat2) #it will give same result
 #for transpose of matrix :
 print(tf.transpose(mat1)) #it will give transopose..
+
+#cross product:
+cross1 = tf.Variable([
+    [1,3,4],
+    [4,6,8]
+])
+cross2 = tf.Variable([
+    [2,8,9],
+    [7,4,8]
+])
+print(tf.linalg.cross(cross1, cross2))
+
+#determinant: #should be square matrix and in float:
+determinant = tf.Variable([
+    [3,4,6],
+    [4,7,8],
+    [2,5,7]
+])
+deter_cast = tf.cast(determinant, dtype= tf.float32) #we willchnage to float from int
+print(tf.linalg.det(deter_cast)) 
+# another method: without casting:
+determin = tf.Variable([
+    [2.0,3.0,5.0],
+    [3,5,8]
+    [2,5,9]
+])
+print(tf.linalg.det(determin)) #also gives result without casting
+
+#inverse method:
+print(tf.linalg.inv(determin))
+#transpose:
+print(tf.linalg.matrix_transpose(determin))
