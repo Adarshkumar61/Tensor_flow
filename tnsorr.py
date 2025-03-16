@@ -215,3 +215,40 @@ print(tf.linalg.det(determin)) #also gives result without casting
 print(tf.linalg.inv(determin))
 #transpose:
 print(tf.linalg.matrix_transpose(determin))
+# adjoint;
+print(tf.linalg.diag(determin))
+#exponential:
+print(tf.linalg.expm(determin))
+
+#multiplyig using numpy:
+ra_num = np.array([
+    [2,3,5,7],
+    [3,5,7,6],
+    [3,1,7,8]
+])
+ra_num1 = np.array([
+    [2,9,3],
+    [4,7,8],
+    [3,6,7],
+    [3,6,8]
+])
+# mat__mul = np.matmul(ra_num, ra_num1)
+# print(mat__mul)
+
+#to expand dimension of matrix:
+expd = tf.Variable([[[2,4,6,6]]]) #3dimesion
+exp_dim = tf.expand_dim(expd, axis=0)
+print(exp_dim)  #now 4 dimension
+#if we want to decrcease 1 dimension by 1 we will write:
+squee = tf.squeeze(expd, axis=0)
+print(squee) #now it has 2 dimension
+
+exxpl = tf.Variable([[[2,3,5]]])
+# print(exxpl.shape)
+# exp = tf.expand_dims(exxpl, axis =0)
+# print(exp)
+# sque = tf.squeeze(exxpl, axis=0)
+# print(sque)
+for i in  range(3):
+  sque = tf.squeeze(exxpl, axis=0)
+  print(sque)
