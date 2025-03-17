@@ -252,3 +252,16 @@ exxpl = tf.Variable([[[2,3,5]]])
 for i in  range(3):
   sque = tf.squeeze(exxpl, axis=0)
   print(sque)
+  
+#   paddingmethod:
+# if we want to make a matrix with some values and other value should we decide we can make by:
+const1 = tf.variable([
+    [2,3,5],
+    [76,8,9]#so this is the value we want to create 
+])
+paddin = [[[2,3], [1,2]]]
+print(tf.pad(const1, paddin, connstant_values = 1)) #here by default constant value is set by 0.
+#that means we want to create a matrix where const1 vlaues should be in direction
+#in these directions 2,2 means we wan to write matrix by lefting 2 rows from upper and 3 means we want 
+#to write matrix by lefting 3rows form lower 
+#and 1,2 menas we want to write our matrix lefting 1 from left side and 2 means we want to write lefting 2 columns right
