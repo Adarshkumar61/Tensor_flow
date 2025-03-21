@@ -1,5 +1,9 @@
 import tensorflow as tf
 import numpy as np
+
+# note u can use tf.Variable or tf.Constand based on method 
+
+
 # creating a 1d array using tesorfloww:
 tensor_1d = tf.Variable([4])
 print(tensor_1d)
