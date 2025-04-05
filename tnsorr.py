@@ -263,7 +263,8 @@ const1 = tf.variable([
     [76,8,9]#so this is the value we want to create 
 ])
 paddin = [[[2,3], [1,2]]]
-print(tf.pad(const1, paddin, connstant_values = 1)) #here by default constant value is set by 0.
+print(tf.pad(const1, paddin, connstant_values = 1)) 
+#here by default constant value is set by 0.
 #that means we want to create a matrix where const1 vlaues should be in direction
 #in these directions 2,2 means we wan to write matrix by lefting 2 rows from upper and 3 means we want 
 #to write matrix by lefting 3rows form lower 
