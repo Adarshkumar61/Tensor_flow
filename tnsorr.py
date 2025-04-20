@@ -265,7 +265,7 @@ const1 = tf.variable([
 paddin = [[[2,3], [1,2]]]
 print(tf.pad(const1, paddin, connstant_values = 1)) 
 #here by default constant value is set by 0.
-#that means we want to create a matrix where const1 vlaues should be in direction
-#in these directions 2,2 means we wan to write matrix by lefting 2 rows from upper and 3 means we want 
+#that means we want to create a matrix where const1 values should be in direction
+#in these directions 2,2 means we want to write matrix by lefting 2 rows from upper and 3 means we want 
 #to write matrix by lefting 3rows form lower 
 #and 1,2 menas we want to write our matrix lefting 1 from left side and 2 means we want to write lefting 2 columns right
