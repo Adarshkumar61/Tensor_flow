@@ -197,7 +197,7 @@ cross2 = tf.Variable([
     [7,4,8]
 ])
 print(tf.linalg.cross(cross1, cross2))
-
+     
 #determinant: #should be square matrix and in float:
 determinant = tf.Variable([
     [3,4,6],
@@ -213,10 +213,10 @@ determin = tf.Variable([
     [2,5,9]
 ])
 print(tf.linalg.det(determin)) #also gives result without casting
-
-#inverse method:
+ 
+# inverse method:
 print(tf.linalg.inv(determin))
-#transpose:
+# transpose:
 print(tf.linalg.matrix_transpose(determin))
 # adjoint;
 print(tf.linalg.diag(determin))
