@@ -180,7 +180,7 @@ mat1 = tf.Variable([
 mat2= tf.variable([
     [2,4,55,7],
     [3,8,5,3],
-    [3,5,8,9]
+    [3,5,8,9]  
 ])
 print(tf.linalg.matmul(mat1, mat2))#we can also write this as:
 print(mat1@mat2) #it will give same result
