@@ -176,7 +176,7 @@ print(tf.math.top_k(top_kk, k=2))
 mat1 = tf.Variable([
     [2,45,6],
     [3,5,6]
-])
+])     
 mat2= tf.variable([
     [2,4,55,7],
     [3,8,5,3],
