@@ -219,7 +219,7 @@ print(tf.linalg.inv(determin))
 # transpose:
 print(tf.linalg.matrix_transpose(determin))
 # adjoint;
-print(tf.linalg.diag(determin))
+print(tf.linalg.diag(determin)) 
 #exponential:
 print(tf.linalg.expm(determin))
 
