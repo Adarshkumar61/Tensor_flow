@@ -224,7 +224,7 @@ print(tf.linalg.diag(determin))
 print(tf.linalg.expm(determin))
 
 #multiplyig using numpy:
-ra_num = np.array([
+ra_num = np.array([ 
     [2,3,5,7],
     [3,5,7,6],
     [3,1,7,8]
