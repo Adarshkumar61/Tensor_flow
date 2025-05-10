@@ -212,7 +212,7 @@ determin = tf.Variable([
     [3,5,8]
     [2,5,9]
 ])
-print(tf.linalg.det(determin)) #also gives result without casting
+print(tf.linalg.det(determin)) #also gives result without casting 
  
 # inverse method:
 print(tf.linalg.inv(determin))
