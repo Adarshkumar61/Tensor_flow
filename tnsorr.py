@@ -202,7 +202,7 @@ print(tf.linalg.cross(cross1, cross2))
 determinant = tf.Variable([
     [3,4,6],
     [4,7,8],
-    [2,5,7]
+    [2,5,7] 
 ]) 
 deter_cast = tf.cast(determinant, dtype= tf.float32) #we willchnage to float from int
 print(tf.linalg.det(deter_cast)) 
