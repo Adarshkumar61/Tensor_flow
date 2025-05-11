@@ -236,6 +236,7 @@ ra_num1 = np.array([
     [3,6,8]
 ])
 # mat__mul = np.matmul(ra_num, ra_num1)
+#this will use to multiply 2 matrix
 # print(mat__mul)
 
 #to expand dimension of matrix:
