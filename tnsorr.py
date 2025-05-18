@@ -156,10 +156,10 @@ print(tf.math.reduce_mean(red)) #output: mean all and give result
 #sigmoid: if a +ve no is large then it will approach to 1
          # of a -ve no is large then it will approach to 0
 #   for +ve:
-x = tf.math.sigmoid([2,667,100,345])
+x = tf.math.sigmoid([2.0,667.0,100.0,345.0])
 print(tf.math.sigmoid(x))
 # for -ve:
-y = tf.math.sigmoid([-5,-100,-576])
+y = tf.math.sigmoid([-5.0,-100.0,-576.0])
 print(tf.math.sigmoid(y))
 
 # top_k : return highest value and also index of each array(k =1 default)
