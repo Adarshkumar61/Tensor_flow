@@ -86,7 +86,7 @@ print(varrr[0:,:,0])
 
 #tensor math:
 x_abs = ([3, -7.6, 34.5, -6])
-tf.abs(x_abs)# it will print : 3. , 7.6 , 34.5, -6.0
+tf.abs(x_abs)# it will print : 3. , 7.6 , 34.5, 6.0
 #so abs(absolute) does change negative to positive ,+ve >+ve
 
 #all math method do with their corresponding indexes..
