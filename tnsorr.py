@@ -255,7 +255,7 @@ exxpl = tf.Variable([[[2,3,5]]])
 # print(sque)
 for i in  range(3):
   sque = tf.squeeze(exxpl, axis=0)
-  print(sque) 
+  print(sque) #used to remove dimension of tensor
   
 #   paddingmethod:
 # if we want to make a matrix with some values and other value should we decide we can make by:
