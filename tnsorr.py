@@ -240,7 +240,7 @@ ra_num1 = np.array([
 # print(mat__mul)
 
 #to expand dimension of matrix:
-expd = tf.Variable([[[2,4,6,6]]]) #3dimesion
+expd = tf.Variable([[[2,4,6,6]]]) #3dimesion 
 exp_dim = tf.expand_dim(expd, axis=0)
 print(exp_dim)  #now 4 dimension
 #if we want to decrcease 1 dimension by 1 we will write:
