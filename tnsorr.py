@@ -259,7 +259,7 @@ for i in  range(3):
   
 #   paddingmethod:
 # if we want to make a matrix with some values and other value should we decide we can make by:
-const1 = tf.variable([
+const1 = tf.variable([ 
     [2,3,5],
     [76,8,9]#so this is the value we want to create 
 ])
