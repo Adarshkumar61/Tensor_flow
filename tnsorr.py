@@ -222,7 +222,7 @@ print(tf.linalg.matrix_transpose(determin))
 print(tf.linalg.diag(determin)) 
 #exponential:
 print(tf.linalg.expm(determin))
-
+ 
 #multiplyig using numpy:
 ra_num = np.array([ 
     [2,3,5,7],
