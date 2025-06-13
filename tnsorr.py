@@ -218,8 +218,8 @@ print(tf.linalg.det(determin)) #also gives result without casting
 print(tf.linalg.inv(determin))
 # transpose:
 print(tf.linalg.matrix_transpose(determin))
-# adjoint;
-print(tf.linalg.diag(determin)) 
+
+print(tf.linalg.diag(determin)) # adjoint 
 #exponential:
 print(tf.linalg.expm(determin))
  
