@@ -221,7 +221,7 @@ print(tf.linalg.matrix_transpose(determin))
 
 print(tf.linalg.diag(determin)) # adjoint 
 #exponential:
-print(tf.linalg.expm(determin))
+print(tf.linalg.expm(determin)) 
  
 #multiplyig using numpy:
 ra_num = np.array([ 
