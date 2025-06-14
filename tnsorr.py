@@ -217,7 +217,7 @@ print(tf.linalg.det(determin)) #also gives result without casting
 # inverse method:
 print(tf.linalg.inv(determin))
 # transpose:
-print(tf.linalg.matrix_transpose(determin))
+print(tf.linalg.matrix_transpose(determin)) 
 
 print(tf.linalg.diag(determin)) # adjoint 
 #exponential:
