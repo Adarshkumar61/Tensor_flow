@@ -270,3 +270,7 @@ print(tf.pad(const1, paddin, connstant_values = 1))
 #in these directions 2,2 means we want to write matrix by lefting 2 rows from upper and 3 means we want 
 #to write matrix by lefting 3rows form lower 
 #and 1,2 menas we want to write our matrix lefting 1 from left side and 2 means we want to write lefting 2 columns right
+
+adv_array = np.array([[2,3,5], [2,12,9]])
+find = adv_array.shape
+print(find)
