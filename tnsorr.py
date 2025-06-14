@@ -273,4 +273,6 @@ print(tf.pad(const1, paddin, connstant_values = 1))
 
 adv_array = np.array([[2,3,5], [2,12,9]])
 find = adv_array.shape
+sum_all = adv_array.sum()
 print(find)
+print(sum_all)
