@@ -223,7 +223,7 @@ print(tf.linalg.diag(determin)) # adjoint
 #exponential:
 print(tf.linalg.expm(determin)) 
  
-#multiplyig using numpy:
+#multiplyig using numpy: 
 ra_num = np.array([ 
     [2,3,5,7],
     [3,5,7,6], 
