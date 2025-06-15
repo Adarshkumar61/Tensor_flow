@@ -246,7 +246,7 @@ print(exp_dim)  #now 4 dimension
 #if we want to decrcease 1 dimension by 1 we will write:
 squee = tf.squeeze(expd, axis=0)
 print(squee) #now it has 2 dimension
-
+ 
 exxpl = tf.Variable([[[2,3,5]]])
 # print(exxpl.shape)
 # exp = tf.expand_dims(exxpl, axis =0)
