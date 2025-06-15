@@ -276,3 +276,5 @@ find = adv_array.shape
 sum_all = adv_array.sum()
 print(find)
 print(sum_all)
+
+n_array = np.array([[23, 54], [12, 98]])
