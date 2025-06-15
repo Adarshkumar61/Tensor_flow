@@ -253,7 +253,7 @@ exxpl = tf.Variable([[[2,3,5]]])
 # print(exp)
 # sque = tf.squeeze(exxpl, axis=0)
 # print(sque)
-for i in  range(3):
+for i in  range(3): 
   sque = tf.squeeze(exxpl, axis=0) 
   print(sque) #used to remove dimension of tensor
   
