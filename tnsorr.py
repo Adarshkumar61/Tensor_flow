@@ -278,3 +278,25 @@ print(find)
 print(sum_all)
 
 n_array = np.array([[23, 54], [12, 98]])
+
+print('this is file')
+# If you have written code but Git is saying "nothing to commit, working tree clean",
+# it means your changes are not being tracked by Git. Make sure you have saved the file,
+# and then run the following commands in your terminal:
+
+# 1. Check the status to see if your file is tracked:
+#    git status
+
+# 2. If your file is not listed under "Changes not staged for commit" or "Untracked files",
+#    it means either you haven't saved your changes, or the file is not added to Git.
+
+# 3. To add your file to staging:
+#    git add /c:/adarsh/tnsor/tnsorr.py
+
+# 4. Then commit your changes:
+#    git commit -m "Add new TensorFlow examples"
+
+# 5. Finally, push to your repository:
+#    git push
+
+# If you still see "nothing to commit, working tree clean", double-check that you are editing the correct file and that you have saved your changes before running the above commands.
